@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>Roll the Dice</title>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="rollDice.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<body>
+
+    
+
+<div class="backsplash">
+    <img src="backsplash.png">
+</div>
+
+<div class="nametag">
+
+
+    <p id="player-name">Player 1</p>
+    <p id="cpname">Player 2</p>
+
+</div>
+
+<div class="dice-form">
+
+    <button id="btn-roll" onclick="rollDice();">Roll the Dice</button>
+
+<div class="player-side">    
+    <img src="diceImage/dice1.png" id="dice-results1">
+    <img src="diceImage/dice1.png" id="dice-results2">
+            
+            <p id="player-points">2</p>
+</div>
+<br>
+<div class="computer-side">
+    
+    <img src="diceImage/dice1.png" id="c-dice-results1">
+    <img src="diceImage/dice1.png" id="c-dice-results2">
+
+            <p id="computer-points">2</p>
+
+            <h3 id="p-winlose" id="t-winlose"></h3>
+            <h4 id="p-dblwin"></h4>
+</div>
+
+<div class="point-holder">
+
+    <h3 id="p-point-holder">0</h3>
+
+    <h3 id="c-point-holder">0</h3>
+
+
+</div>
+
+<div class="btn-container">
+
+    <p id="text-quit"></p>
+    <button id="btn-quit" onclick="quitGame();">Quit Game?</button>
+    
+    <p id="text-continue"></p>
+    <button id="btn-continue" onclick="continueGame();">Continue?</button>
+
+</div>
+
+</div>
+<button id="quit-game" onclick="quitGame();">Quit</button>
+
+<div class="rules-list">
+<p id="rules">
+    Programming Lab 7 | Jason Solis | 10/17/2020
+<br>
+<br>
+    The rules are quite simple, really... it is kill or be killed.
+    Well... maybe less dramatic. The object of the game is have
+    a stroke of luck and make it to 100 points before
+    your opponent does.<br>
+    <br>
+    Here are the rules:
+        <ul>
+            - Whoever has the highest roll of the<br>
+            round wins <i>+1 point</i>.
+        </ul>
+        <ul>
+            - If a player rolls a <i>double</i> <strong>AND</strong> wins<br>
+            the round, they get <i>+2 points</i>.
+        </ul>
+        <ul>
+            - However if a player rolls a <i>double</i><br><strong>AND</strong> does
+            <i><strong>NOT</strong></i> win the round. Then<br>
+            they are not awarded <i>+2 points</i> and still lose.
+        </ul>
+        <ul>
+            - If both players tie, then no one is<br>
+            awarded a point.
+        </ul>
+</p>
+</div>
+
+
+<script src="rollDice.js"></script>
+
+
+
+
+</body>

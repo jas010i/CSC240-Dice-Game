@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+}
+
+div.backsplash > img {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -99; position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: brightness(1.2);
+}
+
+button#btn-roll {
+    position: absolute;
+    display: block;
+    width: 20%;
+    left: 40%;
+    top: 10%;
+    border: 4px solid rgba(0, 82, 82, 0.363);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.089);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3vw;
+    color: rgba(6, 39, 39, 0.733);
+    transition: .4s ease-in-out;
+}
+    button#btn-roll:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+        background-color: rgba(0, 82, 82, 0.76);
+        color: white;
+        border: 4px solid rgba(0, 61, 61, 0.363);
+        border-radius: 360px;
+    }
+
+        button#btn-roll:focus {
+            outline: none;
+        }
+
+div.player-side > #dice-results1 {
+    width: 5%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+    div.player-side > #dice-results2 {
+        width: 5%;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        margin-left: 5%;
+    }
+
+        div.player-side > #player-points {
+            width: 5%;
+            position: absolute;
+            top: 50%;
+            left: 42.5%;
+            font-size: 3vw;
+            font-family: fantasy;
+            text-align: center;
+            color: rgba(0, 61, 61, 0.808);
+            border: 2px solid rgba(0, 61, 61, 0.808);
+            border-radius: 20%;
+        }
+
+div.computer-side > #c-dice-results1 {
+    width: 5%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    filter: invert(1);
+}
+
+    div.computer-side > #c-dice-results2 {
+        width: 5%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-left: 5%;
+        filter: invert(1);
+    }
+
+        div.computer-side > #computer-points {
+            width: 5%;
+            position: absolute;
+            top: 50%;
+            left: 52.5%;
+            font-size: 3vw;
+            font-family: fantasy;
+            text-align: center;
+            color: rgba(0, 61, 61, 0.808);
+            border: 2px solid rgba(0, 61, 61, 0.808);
+            border-radius: 20%;
+        }
+
+div.nametag {
+    width: 40%;
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+    div.nametag > #cpname {
+        font-size: 2vw;
+        color: rgb(199, 0, 0);
+        margin-left: 9%;
+        float: left;
+    }
+
+        div.nametag > #player-name {
+            font-size: 2vw;
+            color: rgb(255, 255, 255);
+            margin-left: 42%;
+            float: left;
+        }
+
+div.computer-side > #p-winlose {
+    width: 70%;
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    text-align: center;
+    color: rgb(0, 61, 61);
+    font-size: 3vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}  
+
+    div.computer-side > #p-dblwin {
+        width: 70%;
+        position: absolute;
+        top: 75%;
+        left: 15%;
+        text-align: center;
+        color: rgba(0, 61, 61, 0.774);
+        font-size: 2vw;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+div.point-holder {
+    width: 40%;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-family: fantasy;
+    font-size: 3vw;
+}
+
+    div.point-holder > #p-point-holder {
+        text-align: left;
+        float: left;
+        color: rgba(18, 174, 201, 0.671);
+        background-color: rgba(0, 52, 59, 0.918);
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding: 3%;
+        border: 4px solid rgba(0, 118, 122, 0.671);
+        border-radius: 20px;
+        transition: .3s ease-in-out;
+    }
+
+        div.point-holder > #c-point-holder {
+            float: right;
+            text-align: right;
+            color: rgba(18, 174, 201, 0.671);
+            background-color: rgba(0, 52, 59, 0.918);
+            padding-top: 1%;
+            padding-bottom: 1%;
+            padding: 3%;
+            border: 4px solid rgba(0, 118, 122, 0.671);
+            border-radius: 20px;
+            transition: .3s ease-in-out;
+        }
+
+button#quit-game {
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    border: 4px solid rgb(0, 118, 122);
+    color: rgb(18, 174, 201);
+    background-color: rgb(0, 52, 59);
+    border-radius: 20px;
+    width: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: monospace;
+    font-size: 2vw;
+    transition: .4s ease-in-out;
+}
+    button#quit-game:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+        button#quit-game:focus {
+            outline: none;
+        }
+
+
+div.rules-list {
+    background-color: rgba(0, 61, 61, 0.144);
+    width: 25%;
+    padding: 1%;
+    position: absolute;
+    top: 0;
+}
+div.rules-list > p#rules, ul {
+    margin-left: 1.5%;
+    font-weight: 600;
+    color: rgb(17, 37, 37);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+    
+div.btn-container > #text-quit, #text-continue {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: -125%;
+    left: 10%;
+    background-color: rgba(0, 29, 29, 0.767);
+    color: rgb(18, 174, 201);
+    font-size: 4vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    transition: .7s ease-in-out;
+}
+
+    div.btn-container > #btn-quit {
+        width: 20%;
+        left: 20%;
+        position: absolute;
+        top: -100%;
+        color: rgb(18, 174, 201);
+        font-size: 4vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        transition: .7s ease-in-out;
+        z-index: +5;
+        background-color: rgba(0,0,0,0);
+        border: none;
+    }
+
+        div.btn-container > #btn-continue {
+            width: 20%;
+            left: 60%;
+            position: absolute;
+            top: -100%;
+            color: rgb(18, 174, 201);
+            font-size: 4vw;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            transition: .7s ease-in-out;
+            z-index: +5;
+            background-color: rgba(0,0,0,0);
+            border: none;
+        }
+
+div.btn-container > #btn-continue:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    color: rgb(0, 110, 129);
+}
+
+#btn-continue:focus{outline: none;}
+
+div.btn-container > #btn-quit:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    color: rgb(0, 110, 129);
+}
+
+#btn-quit:focus{outline: none;}
